@@ -15,4 +15,8 @@ class StoryController {
   void goToNextStory(int choice) {
     _storyData.updateCurrentStory(choice);
   }
+
+  void restart() {
+    _storyData.goBackToInitialStory();
+  }
 }

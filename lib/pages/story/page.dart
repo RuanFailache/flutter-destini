@@ -19,12 +19,12 @@ class _StoryPageState extends State<StoryPage> {
     if (secondChoice == null) {
       return CustomButton(
         text: _storyController.currentStoryChoice1,
+        backgroundColor: Colors.red,
         onPressed: () {
           setState(() {
-            _storyController.goToNextStory(1);
+            _storyController.restart();
           });
         },
-        backgroundColor: Colors.red,
       );
     }
 
@@ -33,24 +33,24 @@ class _StoryPageState extends State<StoryPage> {
       children: [
         CustomButton(
           text: _storyController.currentStoryChoice1,
+          backgroundColor: Colors.red,
           onPressed: () {
             setState(() {
               _storyController.goToNextStory(1);
             });
           },
-          backgroundColor: Colors.red,
         ),
         const SizedBox(
           height: 20,
         ),
         CustomButton(
           text: secondChoice,
+          backgroundColor: Colors.blue,
           onPressed: () {
             setState(() {
               _storyController.goToNextStory(2);
             });
           },
-          backgroundColor: Colors.blue,
         )
       ],
     );
